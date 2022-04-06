@@ -1,0 +1,21 @@
+.pagination {
+  text-align: center;
+  display: block;
+  padding-top: 1rem;
+  margin: 0.5rem auto;
+  width: 100%;
+}
+button {
+  padding: 1rem;
+  border: 2px solid;
+  margin: 0 0.2rem;
+  background-color: #fff;
+  color: blue;
+}
+
+.current-page {
+  padding: 1.5rem;
+  background-color: rgb(47, 82, 211);
+  color: #fff;
+  font-size: 18px;
+}

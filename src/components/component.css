@@ -1,0 +1,16 @@
+/*Flight table*/
+
+table,
+tr,
+th,
+td {
+  border: 1px solid;
+}
+
+table {
+  width: 100%;
+}
+
+th {
+  padding: 1rem 0;
+}

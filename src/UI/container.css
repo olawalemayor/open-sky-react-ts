@@ -1,0 +1,23 @@
+/*Contains container styles*/
+
+.sidebar {
+  position: fixed;
+  width: 60%;
+  left: -60%;
+  z-index: 999;
+}
+
+.toggled {
+  left: 0 !important;
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    left: 0;
+    width: 20%;
+  }
+
+  .main-content {
+    margin-left: 20%;
+  }
+}

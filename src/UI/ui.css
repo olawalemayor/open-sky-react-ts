@@ -1,0 +1,112 @@
+/*Login*/
+.login-title {
+  font-size: 24px;
+  text-align: center;
+  padding-top: 5rem;
+}
+
+.login-form {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.login-form label {
+  display: block;
+  font-size: 16px;
+  line-height: 1.5rem;
+}
+
+.login-form input {
+  font-size: 16px;
+  margin-bottom: 1.5rem;
+  padding: 0.4rem;
+  width: 80%;
+}
+
+.login-form button {
+  padding: 1rem;
+  border: none;
+  background-color: rgb(45, 45, 255);
+  color: #fff;
+  font-size: 16px;
+  border-radius: 0.2rem;
+}
+
+@media (min-width: 768px) {
+  .login-title {
+    padding-top: 7rem;
+  }
+
+  .login-form {
+    margin: 0 auto;
+  }
+
+  .login-form input {
+    width: 40%;
+    max-width: 350px;
+  }
+}
+
+/*Header*/
+
+header {
+  background: rgb(38, 4, 255);
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  align-items: center;
+}
+
+.toggle-sidebar {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.app-brand a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+}
+
+.header-options {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .toggle-sidebar {
+    display: none;
+  }
+  .header-options {
+    display: block;
+  }
+}
+
+/*Sidebar*/
+.app-sidebar {
+  background-color: rgb(34, 32, 32);
+  color: rgb(232, 228, 228);
+  text-align: center;
+  height: 100vh;
+}
+
+.sidebar-item {
+  padding: 1.5rem 0;
+  cursor: pointer;
+}
+
+.sidebar-item:hover {
+  color: rgb(3, 0, 185);
+  background-color: #ccc;
+}
+
+/*Main*/
+main {
+  padding: 1rem;
+}
