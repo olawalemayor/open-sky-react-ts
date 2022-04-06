@@ -34,7 +34,7 @@ export default function Table({
               }) => (
                 <tr key={icao24 + lastSeen}>
                   <td>{estArrivalAirport}</td>
-                  <td>{lastSeen}</td>
+                  <td>{toDate(lastSeen)}</td>
                   <td>{arrivalAirportCandidatesCount}</td>
                   <td>{departureAirportCandidatesCount}</td>
                 </tr>
@@ -44,3 +44,8 @@ export default function Table({
     </table>
   );
 }
+
+const toDate = (date: any) => {
+  const newDate = new Date(date * 1000);
+  return newDate.toUTCString();
+};
