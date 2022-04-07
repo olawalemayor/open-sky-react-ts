@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# About the App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was done using React and Open Sky API
 
 ## Available Scripts
 
@@ -16,8 +16,7 @@ You will also see any lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+No test have been constructed for the application
 
 ### `npm run build`
 
@@ -39,8 +38,6 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## ENVIRONMENTAL VARIABLES
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+I have used one environmental variable "REACT_APP_API_URL" which just sets the Open Sky API endpoint, I didn't want it to be necessarily authenticated so I did not include authentication.
