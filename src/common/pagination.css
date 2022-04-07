@@ -6,7 +6,7 @@
   width: 100%;
 }
 button {
-  padding: 1rem;
+  padding: 0.4rem;
   border: 2px solid;
   margin: 0 0.2rem;
   background-color: #fff;
@@ -14,7 +14,7 @@ button {
 }
 
 .current-page {
-  padding: 1.5rem;
+  padding: 0.5rem;
   background-color: rgb(47, 82, 211);
   color: #fff;
   font-size: 18px;

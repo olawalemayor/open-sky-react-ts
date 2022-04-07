@@ -1,0 +1,14 @@
+.notice {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: red;
+}
+
+.date-selector {
+  margin: 0.5rem 0;
+  line-height: 1.5rem;
+}
+
+.date-selector label {
+  font-size: 18px;
+}

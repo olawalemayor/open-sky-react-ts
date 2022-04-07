@@ -1,51 +1,24 @@
 import React from "react";
+import TableBody from "./tableBody";
 import TableHeader from "./tableHeader";
 
 interface TableProps {
-  data: string[];
-  body: any[];
+  headers: string[];
+  data: any[];
   currentPage: number;
   pageLimit: number;
 }
 
 export default function Table({
+  headers,
   data,
-  body,
   currentPage,
   pageLimit,
 }: TableProps) {
   return (
     <table>
-      <TableHeader data={data} />
-      <tbody>
-        {body &&
-          body
-            .slice(
-              (currentPage - 1) * pageLimit,
-              (currentPage - 1) * pageLimit + pageLimit
-            )
-            .map(
-              ({
-                icao24,
-                lastSeen,
-                estArrivalAirport,
-                departureAirportCandidatesCount,
-                arrivalAirportCandidatesCount,
-              }) => (
-                <tr key={icao24 + lastSeen}>
-                  <td>{estArrivalAirport}</td>
-                  <td>{toDate(lastSeen)}</td>
-                  <td>{arrivalAirportCandidatesCount}</td>
-                  <td>{departureAirportCandidatesCount}</td>
-                </tr>
-              )
-            )}
-      </tbody>
+      <TableHeader headers={headers} />
+      <TableBody currentPage={currentPage} data={data} pageLimit={pageLimit} />
     </table>
   );
 }
-
-const toDate = (date: any) => {
-  const newDate = new Date(date * 1000);
-  return newDate.toUTCString();
-};

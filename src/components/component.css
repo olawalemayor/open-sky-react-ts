@@ -4,13 +4,24 @@ table,
 tr,
 th,
 td {
-  border: 1px solid;
+  text-align: center;
 }
 
 table {
   width: 100%;
+  border: 1px solid;
 }
 
 th {
   padding: 1rem 0;
+  border-bottom: 4px solid blue;
+}
+td {
+  border: 1px solid;
+}
+
+@media (min-width: 1024px) {
+  table {
+    width: 55%;
+  }
 }

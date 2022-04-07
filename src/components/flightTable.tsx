@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
 import "./component.css";
-import Table from "../common/table";
 import axios from "axios";
-import Paginate from "../common/pagination";
+import { Paginate, Table } from "../common";
+import DateSelector from "../common/dateSelector";
 
 export default function FlightTable() {
   const [startDate, setStartDate] = useState<string>("");
 
-  const tableData = ["AIRPORT", "TIME", "Arriving", "Departing"];
+  const headers = ["AIRPORT", "TIME", "Arriving", "Departing"];
 
-  const [tableBody, setTableBody] = useState<any[]>([
+  const [tableData, setTableData] = useState<any[]>([
     {
       icao24: 0,
       lastSeen: 0,
@@ -34,33 +34,23 @@ export default function FlightTable() {
             `${process.env.REACT_APP_API_URL}/api/flights/all?begin=${begin}&end=${end}`
           )
           .then((response) => {
-            setTableBody(response.data);
+            setTableData(response.data);
           });
       } catch (error) {
+        //just logging the errors for now
         console.log(error);
       }
   }, [startDate]);
 
   return (
     <div>
-      <small>
-        <em>Only two hours time interval information will be shown</em>
-      </small>
-      <div>
-        <label htmlFor="date">Select start time date : </label>
-        <input
-          type="datetime-local"
-          name="date"
-          id="date"
-          onChange={(e) => setStartDate(e.currentTarget.value)}
-        />
-      </div>
-      {tableBody[0].icao24 !== 0 && (
+      <DateSelector setDate={setStartDate} />
+      {tableData[0].icao24 !== 0 && (
         <>
           <div className="flight-table">
             <Table
+              headers={headers}
               data={tableData}
-              body={tableBody}
               currentPage={currentPage}
               pageLimit={pageLimit}
             />
@@ -69,7 +59,7 @@ export default function FlightTable() {
           <Paginate
             currentPage={currentPage}
             setCurrentPage={setCurrentPage}
-            totalItems={tableBody.length}
+            totalItems={tableData.length}
             pageLimit={pageLimit}
           />
         </>

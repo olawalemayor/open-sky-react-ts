@@ -101,7 +101,8 @@ header {
   cursor: pointer;
 }
 
-.sidebar-item:hover {
+.sidebar-item:hover,
+.sidebar-item.active {
   color: rgb(3, 0, 185);
   background-color: #ccc;
 }
